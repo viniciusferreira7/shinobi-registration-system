@@ -12,7 +12,7 @@
 	<artifactId>ShinobiRegistrationSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ShinobiRegistrationSystem</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Shinobi registration system API</description>
 	<url/>
 	<licenses>
 		<license/>
