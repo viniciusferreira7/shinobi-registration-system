@@ -28,27 +28,27 @@ public class NinjaModel {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public Long getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public NinjaRank getRank() {
+        return rank;
+    }
+
+    public List<MissionModel> getMissions() {
+        return missions;
     }
 }
