@@ -1,4 +1,4 @@
-package dev.java10.ShinobiRegistrationSystem;
+package dev.java10.ShinobiRegistrationSystem.Ninjas.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

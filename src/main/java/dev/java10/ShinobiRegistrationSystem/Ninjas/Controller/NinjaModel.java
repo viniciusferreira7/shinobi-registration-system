@@ -1,6 +1,9 @@
-package dev.java10.ShinobiRegistrationSystem;
+package dev.java10.ShinobiRegistrationSystem.Ninjas.Controller;
 
+import dev.java10.ShinobiRegistrationSystem.Missions.Controller.MissionModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_register")
@@ -11,7 +14,10 @@ public class NinjaModel {
     private Long id;
     private String name;
     private String email;
-    int age;
+    private int age;
+
+    @OneToMany
+    private List<MissionModel> missions;
 
     public NinjaModel(String name, String email, int age) {
         this.name = name;
