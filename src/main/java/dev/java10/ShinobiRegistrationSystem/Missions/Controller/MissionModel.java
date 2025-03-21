@@ -3,6 +3,8 @@ package dev.java10.ShinobiRegistrationSystem.Missions.Controller;
 import dev.java10.ShinobiRegistrationSystem.Ninjas.Controller.NinjaModel;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_missions")
 public class MissionModel {
@@ -13,17 +15,17 @@ public class MissionModel {
     private String name;
     private String description;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "ninja_id", nullable = false)
-    private NinjaModel ninja;
+    private List<NinjaModel> ninjas;
 
     @Enumerated(EnumType.STRING)
     private MissionRank rank;
 
-    public MissionModel(String name, String description, NinjaModel ninja, MissionRank rank) {
+    public MissionModel(String name, String description, List<NinjaModel> ninjas, MissionRank rank) {
         this.name = name;
         this.description = description;
-        this.ninja = ninja;
+        this.ninjas = ninjas;
         this.rank = rank;
     }
 
@@ -39,8 +41,8 @@ public class MissionModel {
         return description;
     }
 
-    public NinjaModel getNinja() {
-        return ninja;
+    public List<NinjaModel> getNinjas() {
+        return ninjas;
     }
 
     public MissionRank getRank() {

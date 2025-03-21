@@ -19,13 +19,16 @@ public class NinjaModel {
     @Enumerated(EnumType.STRING)
     private NinjaRank rank;
 
-    @OneToMany
-    private List<MissionModel> missions;
+    @ManyToOne
+    @JoinColumn(name = "mission_id", nullable = false)
+    private MissionModel mission;
 
-    public NinjaModel(String name, String email, int age) {
+    public NinjaModel(String name, String email, int age, NinjaRank rank, MissionModel mission) {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.rank = rank;
+        this.mission = mission;
     }
 
     public Long getId() {
@@ -48,7 +51,7 @@ public class NinjaModel {
         return rank;
     }
 
-    public List<MissionModel> getMissions() {
-        return missions;
+    public MissionModel getMission() {
+        return mission;
     }
 }
