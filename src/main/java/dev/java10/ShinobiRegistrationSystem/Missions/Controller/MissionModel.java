@@ -17,10 +17,14 @@ public class MissionModel {
     @JoinColumn(name = "ninja_id", nullable = false)
     private NinjaModel ninja;
 
-    public MissionModel(NinjaModel ninja, String description, String name) {
-        this.ninja = ninja;
-        this.description = description;
+    @Enumerated(EnumType.STRING)
+    private MissionRank rank;
+
+    public MissionModel(String name, String description, NinjaModel ninja, MissionRank rank) {
         this.name = name;
+        this.description = description;
+        this.ninja = ninja;
+        this.rank = rank;
     }
 
     public Long getId() {
@@ -37,5 +41,9 @@ public class MissionModel {
 
     public NinjaModel getNinja() {
         return ninja;
+    }
+
+    public MissionRank getRank() {
+        return rank;
     }
 }

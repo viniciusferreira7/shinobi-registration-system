@@ -16,6 +16,9 @@ public class NinjaModel {
     private String email;
     private int age;
 
+    @Enumerated(EnumType.STRING)
+    private NinjaRank rank;
+
     @OneToMany
     private List<MissionModel> missions;
 
