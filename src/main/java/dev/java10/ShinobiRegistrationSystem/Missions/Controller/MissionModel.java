@@ -15,7 +15,7 @@ public class MissionModel {
     private String name;
     private String description;
 
-    @OneToMany
+    @OneToMany(mappedBy = "mission")
     @JoinColumn(name = "ninja_id", nullable = false)
     private List<NinjaModel> ninjas;
 

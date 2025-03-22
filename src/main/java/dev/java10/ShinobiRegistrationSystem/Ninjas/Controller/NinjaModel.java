@@ -19,15 +19,19 @@ public class NinjaModel {
     @Enumerated(EnumType.STRING)
     private NinjaRank rank;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "mission_id", nullable = false)
     private MissionModel mission;
 
-    public NinjaModel(String name, String email, int age, NinjaRank rank, MissionModel mission) {
+    public NinjaModel(String name, String email, int age, NinjaRank rank) {
         this.name = name;
         this.email = email;
         this.age = age;
         this.rank = rank;
+    }
+
+    public NinjaModel(String name, String email, int age, NinjaRank rank, MissionModel mission) {
+        this(name, email, age, rank);
         this.mission = mission;
     }
 
