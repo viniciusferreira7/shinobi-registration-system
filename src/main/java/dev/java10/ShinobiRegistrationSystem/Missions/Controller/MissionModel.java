@@ -2,11 +2,17 @@ package dev.java10.ShinobiRegistrationSystem.Missions.Controller;
 
 import dev.java10.ShinobiRegistrationSystem.Ninjas.Controller.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_missions")
+@AllArgsConstructor
+@Data
 public class MissionModel {
 
     @Id
@@ -21,31 +27,4 @@ public class MissionModel {
 
     @Enumerated(EnumType.STRING)
     private MissionRank rank;
-
-    public MissionModel(String name, String description, List<NinjaModel> ninjas, MissionRank rank) {
-        this.name = name;
-        this.description = description;
-        this.ninjas = ninjas;
-        this.rank = rank;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public List<NinjaModel> getNinjas() {
-        return ninjas;
-    }
-
-    public MissionRank getRank() {
-        return rank;
-    }
 }
