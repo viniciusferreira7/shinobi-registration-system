@@ -1,13 +1,9 @@
-package dev.java10.ShinobiRegistrationSystem.Ninjas.Controller;
+package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
-import dev.java10.ShinobiRegistrationSystem.Missions.Controller.MissionModel;
+import dev.java10.ShinobiRegistrationSystem.Missions.MissionModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.List;
 
 @Entity
 @Table(name = "tb_register")

@@ -1,4 +1,4 @@
-package dev.java10.ShinobiRegistrationSystem.Ninjas.Controller;
+package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
 public enum NinjaRank {
     GENIN,

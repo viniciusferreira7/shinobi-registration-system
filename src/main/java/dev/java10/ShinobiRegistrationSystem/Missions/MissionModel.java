@@ -1,11 +1,9 @@
-package dev.java10.ShinobiRegistrationSystem.Missions.Controller;
+package dev.java10.ShinobiRegistrationSystem.Missions;
 
-import dev.java10.ShinobiRegistrationSystem.Ninjas.Controller.NinjaModel;
+import dev.java10.ShinobiRegistrationSystem.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 
