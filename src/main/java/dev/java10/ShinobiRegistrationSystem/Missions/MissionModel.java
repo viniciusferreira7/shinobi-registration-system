@@ -20,7 +20,6 @@ public class MissionModel {
     private String description;
 
     @OneToMany(mappedBy = "mission")
-    @JoinColumn(name = "ninja_id", nullable = false)
     private List<NinjaModel> ninjas;
 
     @Enumerated(EnumType.STRING)
