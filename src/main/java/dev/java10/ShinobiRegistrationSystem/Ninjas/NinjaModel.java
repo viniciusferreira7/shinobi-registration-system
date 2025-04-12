@@ -13,15 +13,20 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
+
+    @Column
     private String name;
 
     @Column(unique = true)
     private String email;
 
+    @Column
     private int age;
 
     @Enumerated(EnumType.STRING)
+    @Column
     private NinjaRank rank;
 
     @ManyToOne()

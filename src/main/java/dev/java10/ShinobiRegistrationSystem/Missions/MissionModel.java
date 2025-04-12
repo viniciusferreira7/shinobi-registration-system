@@ -15,13 +15,20 @@ public class MissionModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private String description;
 
     @OneToMany(mappedBy = "mission")
+    @Column
     private List<NinjaModel> ninjas;
 
     @Enumerated(EnumType.STRING)
+    @Column
     private MissionRank rank;
 }
