@@ -1,15 +1,33 @@
 package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
 public class NinjaController {
 
-    @GetMapping("/hello-world")
-    public String welcome(){
-        return "Hello world";
-    }
+   @PostMapping("/ninjas")
+   public String createNinja(){
+       return "Created ninja";
+   }
+
+   @GetMapping("/ninjas")
+   public String getNinjas(){
+       return "Ninjas";
+   }
+
+   @GetMapping("/ninjas/{id}")
+   public String getNinjaById(){
+       return "Ninja by id";
+   }
+
+   @PatchMapping("/ninjas/{id}")
+   public String updateNinja(){
+       return "Ninja updated";
+   }
+
+   @DeleteMapping("/ninjas/{id}")
+   public String deleteNinja(){
+       return "Ninja deleted";
+   }
 }
