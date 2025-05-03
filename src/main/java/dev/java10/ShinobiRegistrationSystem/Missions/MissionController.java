@@ -3,30 +3,30 @@ package dev.java10.ShinobiRegistrationSystem.Missions;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/missions")
 public class MissionController {
 
-    @PostMapping("/missions")
+    @PostMapping
     public String createMission() {
         return "Created mission";
     }
 
-    @GetMapping("/missions")
+    @GetMapping
     public String getMissions() {
         return "Missions";
     }
 
-    @GetMapping("/missions/{id}")
+    @GetMapping("/{id}")
     public String getMissionById() {
         return "Mission by id";
     }
 
-    @PatchMapping("/missions/{id}")
+    @PutMapping("/{id}")
     public String updateMission() {
         return "Mission updated";
     }
 
-    @DeleteMapping("/missions/{id}")
+    @DeleteMapping("/{id}")
     public String deleteMission() {
         return "Mission deleted";
     }

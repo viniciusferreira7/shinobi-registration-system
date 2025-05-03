@@ -3,30 +3,30 @@ package dev.java10.ShinobiRegistrationSystem.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninjas")
 public class NinjaController {
 
-   @PostMapping("/ninjas")
+   @PostMapping
    public String createNinja(){
        return "Created ninja";
    }
 
-   @GetMapping("/ninjas")
+   @GetMapping
    public String getNinjas(){
        return "Ninjas";
    }
 
-   @GetMapping("/ninjas/{id}")
+   @GetMapping("/{id}")
    public String getNinjaById(){
        return "Ninja by id";
    }
 
-   @PatchMapping("/ninjas/{id}")
+   @PutMapping("/{id}")
    public String updateNinja(){
        return "Ninja updated";
    }
 
-   @DeleteMapping("/ninjas/{id}")
+   @DeleteMapping("/{id}")
    public String deleteNinja(){
        return "Ninja deleted";
    }
