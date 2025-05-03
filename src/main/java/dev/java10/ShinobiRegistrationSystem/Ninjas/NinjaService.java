@@ -13,8 +13,6 @@ public class NinjaService {
     }
 
     public List<NinjaModel> getNinjas(){
-       List<NinjaModel> ninjas = this.ninjaRepository.findAll();
-
-       return ninjas;
+        return this.ninjaRepository.findAll();
     }
 }

@@ -2,9 +2,16 @@ package dev.java10.ShinobiRegistrationSystem.Missions;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/missions")
 public class MissionController {
+    private final MissionService missionService;
+
+    public MissionController(MissionService missionService) {
+        this.missionService = missionService;
+    }
 
     @PostMapping
     public String createMission() {
@@ -12,8 +19,8 @@ public class MissionController {
     }
 
     @GetMapping
-    public String getMissions() {
-        return "Missions";
+    public List<MissionModel> getMissions() {
+        return this.missionService.getMissions();
     }
 
     @GetMapping("/{id}")

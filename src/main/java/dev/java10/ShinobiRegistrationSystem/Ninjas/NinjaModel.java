@@ -5,10 +5,12 @@ import dev.java10.ShinobiRegistrationSystem.Missions.MissionModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_ninjas")
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class NinjaModel {
 
