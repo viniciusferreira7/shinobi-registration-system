@@ -2,18 +2,26 @@ package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/ninjas")
 public class NinjaController {
 
-   @PostMapping
+    private final NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
+
+    @PostMapping
    public String createNinja(){
        return "Created ninja";
    }
 
    @GetMapping
-   public String getNinjas(){
-       return "Ninjas";
+   public List<NinjaModel> getNinjas(){
+       return this.ninjaService.getNinjas();
    }
 
    @GetMapping("/{id}")

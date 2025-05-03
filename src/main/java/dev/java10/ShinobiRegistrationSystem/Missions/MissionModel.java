@@ -1,5 +1,6 @@
 package dev.java10.ShinobiRegistrationSystem.Missions;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.java10.ShinobiRegistrationSystem.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class MissionModel {
 
     @OneToMany(mappedBy = "mission")
     @Column
+    @JsonIgnore
     private List<NinjaModel> ninjas;
 
     @Enumerated(EnumType.STRING)

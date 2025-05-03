@@ -1,5 +1,6 @@
 package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.java10.ShinobiRegistrationSystem.Missions.MissionModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
