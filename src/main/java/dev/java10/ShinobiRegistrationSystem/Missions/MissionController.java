@@ -24,8 +24,8 @@ public class MissionController {
     }
 
     @GetMapping("/{id}")
-    public String getMissionById() {
-        return "Mission by id";
+    public MissionModel getMissionById(@PathVariable Long id) {
+        return this.missionService.getMissionById(id);
     }
 
     @PutMapping("/{id}")
