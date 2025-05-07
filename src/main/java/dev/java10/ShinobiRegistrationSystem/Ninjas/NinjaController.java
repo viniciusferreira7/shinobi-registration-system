@@ -3,6 +3,7 @@ package dev.java10.ShinobiRegistrationSystem.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/ninjas")
@@ -25,8 +26,8 @@ public class NinjaController {
    }
 
    @GetMapping("/{id}")
-   public String getNinjaById(){
-       return "Ninja by id";
+   public NinjaModel getNinjaById(@PathVariable Long id){
+       return this.ninjaService.getNinjaById(id);
    }
 
    @PutMapping("/{id}")
