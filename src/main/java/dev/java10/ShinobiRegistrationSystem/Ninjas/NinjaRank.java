@@ -2,7 +2,7 @@ package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
 public enum NinjaRank {
     GENIN,
-    CHUNIN,
+    CHUUNIN,
     JOUNIN,
     SANNIN,
     KAGE
