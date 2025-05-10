@@ -13,6 +13,9 @@ public class MissionService {
         this.missionRepository = missionRepository;
     }
 
+    public MissionModel createMission(MissionModel mission){
+        return this.missionRepository.save(mission);
+    }
     public List<MissionModel> getMissions(){
         return this.missionRepository.findAll();
     }
@@ -22,4 +25,5 @@ public class MissionService {
 
         return mission.orElse(null);
     }
+
 }

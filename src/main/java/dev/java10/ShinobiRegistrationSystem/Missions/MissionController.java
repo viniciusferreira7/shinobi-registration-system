@@ -14,8 +14,8 @@ public class MissionController {
     }
 
     @PostMapping
-    public String createMission() {
-        return "Created mission";
+    public MissionModel createMission(@RequestBody MissionModel mission) {
+        return this.missionService.createMission(mission);
     }
 
     @GetMapping
