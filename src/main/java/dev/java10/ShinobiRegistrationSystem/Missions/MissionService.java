@@ -26,4 +26,8 @@ public class MissionService {
         return mission.orElse(null);
     }
 
+    public void deleteMissionById(Long id){
+        this.missionRepository.deleteById(id);
+    }
+
 }
