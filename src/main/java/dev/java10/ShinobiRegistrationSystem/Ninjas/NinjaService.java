@@ -26,4 +26,10 @@ public class NinjaService {
 
         return ninja.orElse(null);
     }
+
+    public void deleteNinjaById(Long id){
+        this.ninjaRepository.deleteById(id);
+    }
+
+
 }
