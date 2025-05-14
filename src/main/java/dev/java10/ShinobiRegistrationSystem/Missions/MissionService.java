@@ -1,5 +1,6 @@
 package dev.java10.ShinobiRegistrationSystem.Missions;
 
+import dev.java10.ShinobiRegistrationSystem.Ninjas.NinjaModel;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,6 +25,15 @@ public class MissionService {
         Optional<MissionModel> mission = this.missionRepository.findById(id);
 
         return mission.orElse(null);
+    }
+
+    public MissionModel updateMission(Long id, MissionModel updatedMission){
+        if(this.missionRepository.existsById(id)){
+            updatedMission.setId(id);
+            return this.missionRepository.save(updatedMission);
+        }
+
+        return null;
     }
 
     public void deleteMissionById(Long id){
