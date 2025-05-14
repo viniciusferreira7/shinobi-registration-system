@@ -28,7 +28,7 @@ public class MissionController {
         return this.missionService.getMissionById(id);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public MissionModel updateMission(@PathVariable Long id, @RequestBody MissionModel data) {
         return this.missionService.updateMission(id, data);
     }

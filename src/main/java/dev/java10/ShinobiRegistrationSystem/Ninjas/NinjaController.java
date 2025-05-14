@@ -30,7 +30,7 @@ public class NinjaController {
        return this.ninjaService.getNinjaById(id);
    }
 
-   @PutMapping("/{id}")
+   @PatchMapping("/{id}")
    public NinjaModel updateNinja(@PathVariable Long id, @RequestBody NinjaModel data){
        return this.ninjaService.updateNinja(id, data);
    }
