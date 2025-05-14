@@ -15,7 +15,7 @@ public class NinjaController {
         this.ninjaService = ninjaService;
     }
 
-    @PostMapping
+   @PostMapping
    public NinjaModel createNinja(@RequestBody NinjaModel ninja){
        return this.ninjaService.createNinja(ninja);
    }
@@ -31,8 +31,8 @@ public class NinjaController {
    }
 
    @PutMapping("/{id}")
-   public String updateNinja(){
-       return "Ninja updated";
+   public NinjaModel updateNinja(@PathVariable Long id, @RequestBody NinjaModel data){
+       return this.ninjaService.updateNinja(id, data);
    }
 
    @DeleteMapping("/{id}")

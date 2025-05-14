@@ -27,6 +27,16 @@ public class NinjaService {
         return ninja.orElse(null);
     }
 
+    public NinjaModel updateNinja(Long id, NinjaModel updatedNinja){
+        if(this.ninjaRepository.existsById(id)){
+            updatedNinja.setId(id);
+
+           return this.ninjaRepository.save(updatedNinja);
+        }
+
+        return null;
+    }
+
     public void deleteNinjaById(Long id){
         this.ninjaRepository.deleteById(id);
     }

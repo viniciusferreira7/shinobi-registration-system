@@ -35,5 +35,4 @@ public class NinjaModel {
     @ManyToOne()
     @JoinColumn(name = "mission_id", nullable = false)
     private MissionModel mission;
-
 }
