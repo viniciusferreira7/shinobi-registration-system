@@ -1,0 +1,203 @@
+[33mcommit 6cbea5a18d5ad5a97178da40a52f3fffba241fb7[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/T-001-create-dto-mapper[m[33m, [m[1;31morigin/feature/T-001-create-dto-mapper[m[33m)[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 17 10:53:45 2025 -0300
+
+    feat: add ninja mapper to mapping dto and model
+
+[33mcommit 8d3c458b46736c64fe672ef7dbe70d1e26cdfa2c[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed May 14 09:56:39 2025 -0300
+
+    feat: create dto and mapper for ninja
+
+[33mcommit 3fea2828bee6dcb23c522422e24a250d24515a29[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed May 14 09:55:45 2025 -0300
+
+    fix: change method to update mission and ninja to patch
+
+[33mcommit c2ddb1c20b8ee143d8313b282b4a8ea46a11270c[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed May 14 09:36:00 2025 -0300
+
+    feat: add update route in mission controller
+
+[33mcommit 88321449b7a115e5de79f9f9806490d74a746032[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed May 14 09:32:04 2025 -0300
+
+    feat: add update route in ninja controller
+
+[33mcommit dd7cc5f1994dad631f0871678d5c45406dd40784[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 10 11:18:04 2025 -0300
+
+    feat: add route to delete mission
+
+[33mcommit b715bcabef44d0978497c6c97c1fd9df381181ad[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 10 11:16:13 2025 -0300
+
+    feat: add route to delete ninja
+
+[33mcommit 576959623efa7900b79c9545af551808b804724b[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 10 11:00:49 2025 -0300
+
+    feat: add route to create mission
+
+[33mcommit b2aa3c1abce93ff03154efa76709230384edd52c[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 10 10:53:03 2025 -0300
+
+    feat: add route to create ninja
+
+[33mcommit 5b0f195f8ac59fab9616e3d13271fbcecac50554[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed May 7 09:04:33 2025 -0300
+
+    feat: add route to get mission by id
+
+[33mcommit 16fb290aab6e34ea24690476574729d737b2b308[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed May 7 09:02:05 2025 -0300
+
+    feat: add route to get ninja by id
+
+[33mcommit cb5798d7f4bdcd1d06d6a17db8c829e7fb0ffc21[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 3 11:34:13 2025 -0300
+
+    feat: add missionService to get missions
+
+[33mcommit 848c0fb22a8cf125a4b4a92132cb06fed9556336[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 3 11:25:36 2025 -0300
+
+    feat: add ninjaService to get ninjas
+
+[33mcommit 7e18a633eac5e79ae66a5069a081a45f2676f605[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat May 3 10:33:06 2025 -0300
+
+    refactor: change mapping of controller
+
+[33mcommit f4751619d2bbcbacc972801344f6c11771c8baa0[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed Apr 30 09:55:18 2025 -0300
+
+    feat: create main endpoint to ninja and mission
+
+[33mcommit 80a9eb1bfa21783c1ceb0b251506697a2a6a2f17[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat Apr 19 11:35:33 2025 -0300
+
+    feat: add flyway to create migrations
+
+[33mcommit 7b5a695d3736f957fdad34f593e3a7a114b8bfcb[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat Apr 19 10:35:10 2025 -0300
+
+    chore: add data in .gitignore
+
+[33mcommit a2c01534bf86a60e73fa4150436b415aa5a6e19d[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat Apr 12 11:04:59 2025 -0300
+
+    feat: add annotation @Column
+
+[33mcommit 33733845a1c97410afdf40cb5b9f322f0d916ce3[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed Apr 9 10:30:11 2025 -0300
+
+    chore: add .env in git ignore
+
+[33mcommit fed3f80d4cb42c2d50e477b037339120d9b20fc2[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed Apr 9 09:48:03 2025 -0300
+
+    fix: change table name
+
+[33mcommit 21e9a8ce95679ebfb0f0d2b1ef18e292186433b5[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat Apr 5 11:10:25 2025 -0300
+
+    feat: add configuration of H2 database
+
+[33mcommit 9f06ff915725a0ad6bc0fc2049403af9bd0e446a[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Fri Mar 28 11:10:35 2025 -0300
+
+    feat: add mission repositoty
+
+[33mcommit a905e4e476c67675df7989530481637143ad8d71[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Thu Mar 27 13:24:13 2025 -0300
+
+    refactor: modify to use the layered architecture
+
+[33mcommit 6bc14915c72233d94c839e24c93fd9ed159dbf99[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Tue Mar 25 13:56:39 2025 -0300
+
+    fix: put column email with unique constraint
+
+[33mcommit 2d3b6cfa1218ff5b4947342bbf744a6232de83e0[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Mon Mar 24 13:23:28 2025 -0300
+
+    feat: add lombok dependency
+
+[33mcommit 5ad2de64a9a2227a12e01173df6fd8fab9e7b731[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Sat Mar 22 12:14:01 2025 -0300
+
+    fix: correct the  manyToOne anotation
+
+[33mcommit a4ab13fd1b59ce055f036bc7903142d47c3b6261[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Fri Mar 21 14:15:33 2025 -0300
+
+    fix: modify relationship between models
+
+[33mcommit b7cf8affb45ad30e0e899614bd40e2543e9bfc01[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Fri Mar 21 14:10:18 2025 -0300
+
+    feat: correct getters and setters in ninja and missions model
+
+[33mcommit 38fa626bbf889e735e0ee74e3bc36fe620aaba2f[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Fri Mar 21 13:53:33 2025 -0300
+
+    feat: create missionRank and ninjaRank enums
+
+[33mcommit 0aab08c12cc8f1aaf6076038ba523bd493ca1569[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Fri Mar 21 13:48:19 2025 -0300
+
+    feat: create mission model
+
+[33mcommit db3aa37c5d42c606f834c72aee38945ef614e54a[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed Mar 19 16:19:40 2025 -0300
+
+    feat: add keyword private in attributes in ninja class
+
+[33mcommit d69a15ad03fc06c5bd4ba7681523f5b4333d1a2c[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Wed Mar 19 13:41:45 2025 -0300
+
+    feat: create ninja entity
+
+[33mcommit c8951cdcb63753a585ab3845df6e9905609196d7[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Tue Mar 18 14:49:06 2025 -0300
+
+    feat: add first route with spring boot
+
+[33mcommit de1e74f7ea590754996d9bd27a2c6b6115db6cd6[m
+Author: Vinicius Ferreira <viniciuferreira32@gmail.com>
+Date:   Fri Mar 14 15:40:04 2025 -0300
+
+    build: create the basic structure of the project
