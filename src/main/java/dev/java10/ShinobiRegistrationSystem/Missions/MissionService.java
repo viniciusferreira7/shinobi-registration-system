@@ -9,28 +9,35 @@ import java.util.Optional;
 @Service
 public class MissionService {
     private final MissionRepository missionRepository;
+    private final MissionMapper missionMapper;
 
-    public MissionService(MissionRepository missionRepository) {
+    public MissionService(MissionRepository missionRepository, MissionMapper missionMapper) {
         this.missionRepository = missionRepository;
+        this.missionMapper = missionMapper;
     }
 
-    public MissionModel createMission(MissionModel mission){
-        return this.missionRepository.save(mission);
+    public MissionDTO createMission(MissionDTO missionDTO){
+        MissionModel missionModel = this.missionMapper.map(missionDTO);
+        MissionModel mission = this.missionRepository.save(missionModel);
+        return this.missionMapper.map(mission);
     }
-    public List<MissionModel> getMissions(){
-        return this.missionRepository.findAll();
+    public List<MissionDTO> getMissions(){
+        List<MissionModel> missionsModel = this.missionRepository.findAll();
+
+        return missionsModel.stream().map(this.missionMapper::map).toList();
     }
 
-    public MissionModel getMissionById(Long id){
+    public MissionDTO getMissionById(Long id){
         Optional<MissionModel> mission = this.missionRepository.findById(id);
 
-        return mission.orElse(null);
+        return mission.map(this.missionMapper::map).orElse(null);
     }
 
-    public MissionModel updateMission(Long id, MissionModel updatedMission){
+    public MissionDTO updateMission(Long id, MissionDTO updatedMission){
         if(this.missionRepository.existsById(id)){
             updatedMission.setId(id);
-            return this.missionRepository.save(updatedMission);
+            MissionModel missionModel = this.missionMapper.map(updatedMission);
+            return this.missionMapper.map(missionModel);
         }
 
         return null;

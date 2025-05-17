@@ -1,5 +1,8 @@
 package dev.java10.ShinobiRegistrationSystem.Missions;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MissionMapper {
     public MissionModel map(MissionDTO missionDTO){
         MissionModel missionModel = new MissionModel();

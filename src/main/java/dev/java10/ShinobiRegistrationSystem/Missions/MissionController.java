@@ -14,22 +14,22 @@ public class MissionController {
     }
 
     @PostMapping
-    public MissionModel createMission(@RequestBody MissionModel mission) {
+    public MissionDTO createMission(@RequestBody MissionDTO mission) {
         return this.missionService.createMission(mission);
     }
 
     @GetMapping
-    public List<MissionModel> getMissions() {
+    public List<MissionDTO> getMissions() {
         return this.missionService.getMissions();
     }
 
     @GetMapping("/{id}")
-    public MissionModel getMissionById(@PathVariable Long id) {
+    public MissionDTO getMissionById(@PathVariable Long id) {
         return this.missionService.getMissionById(id);
     }
 
     @PatchMapping("/{id}")
-    public MissionModel updateMission(@PathVariable Long id, @RequestBody MissionModel data) {
+    public MissionDTO updateMission(@PathVariable Long id, @RequestBody MissionDTO data) {
         return this.missionService.updateMission(id, data);
     }
 
