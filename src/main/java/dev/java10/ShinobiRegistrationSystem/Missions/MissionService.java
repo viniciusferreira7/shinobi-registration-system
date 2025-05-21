@@ -34,7 +34,9 @@ public class MissionService {
     }
 
     public MissionDTO updateMission(Long id, MissionDTO updatedMission){
-        if(this.missionRepository.existsById(id)){
+        Optional<MissionModel> mission = this.missionRepository.findById(id);
+
+        if(mission.isPresent()){
             updatedMission.setId(id);
             MissionModel missionModel = this.missionMapper.map(updatedMission);
             return this.missionMapper.map(missionModel);

@@ -38,7 +38,9 @@ public class NinjaService {
     }
 
     public NinjaDTO updateNinja(Long id, NinjaDTO updatedNinja){
-        if(this.ninjaRepository.existsById(id)){
+        Optional<NinjaModel> ninja = this.ninjaRepository.findById(id);
+
+        if(ninja.isPresent()){
             updatedNinja.setId(id);
 
             NinjaModel ninjaModel = this.ninjaMapper.map(updatedNinja);
