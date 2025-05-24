@@ -1,5 +1,7 @@
 package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,27 +18,44 @@ public class NinjaController {
     }
 
    @PostMapping
-   public NinjaDTO createNinja(@RequestBody NinjaDTO ninja){
-       return this.ninjaService.createNinja(ninja);
+   public ResponseEntity<Void> createNinja(@RequestBody NinjaDTO ninja){
+        this.ninjaService.createNinja(ninja);
+
+       return ResponseEntity.status(HttpStatus.CREATED).build();
    }
 
    @GetMapping
-   public List<NinjaDTO> getNinjas(){
-       return this.ninjaService.getNinjas();
+   public ResponseEntity<List<NinjaDTO>> getNinjas(){
+       return ResponseEntity.status(HttpStatus.OK).body(this.ninjaService.getNinjas());
    }
 
    @GetMapping("/{id}")
-   public NinjaDTO getNinjaById(@PathVariable Long id){
-       return this.ninjaService.getNinjaById(id);
+   public ResponseEntity<NinjaDTO> getNinjaById(@PathVariable Long id){
+       if(this.ninjaService.getNinjaById(id) == null){
+           return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+       }
+
+       return ResponseEntity.status(HttpStatus.OK).body(this.ninjaService.getNinjaById(id));
    }
 
    @PatchMapping("/{id}")
-   public NinjaDTO updateNinja(@PathVariable Long id, @RequestBody NinjaDTO data){
-       return this.ninjaService.updateNinja(id, data);
+   public ResponseEntity<Void> updateNinja(@PathVariable Long id, @RequestBody NinjaDTO data){
+        if(this.ninjaService.getNinjaById(id) == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        this.ninjaService.updateNinja(id, data);
+
+       return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
    }
 
    @DeleteMapping("/{id}")
-   public void deleteNinja(@PathVariable Long id){
+   public ResponseEntity<Void> deleteNinja(@PathVariable Long id){
+       if(this.ninjaService.getNinjaById(id) == null){
+           return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+       }
+
         this.ninjaService.deleteNinjaById(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
    }
 }
