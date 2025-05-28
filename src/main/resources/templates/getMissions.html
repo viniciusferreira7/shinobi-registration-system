@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Missões</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #2196F3;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+<h1>Lista de Missões</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Rank</th>
+    <th>Ninjas Envolvidos</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="mission : ${missions}">
+    <td th:text="${mission.id}"></td>
+    <td th:text="${mission.name}"></td>
+    <td th:text="${mission.description}"></td>
+    <td th:text="${mission.rank}"></td>
+    <td>
+      <ul>
+        <li th:each="ninja : ${mission.ninjas}"
+            th:text="${ninja.name}"></li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
