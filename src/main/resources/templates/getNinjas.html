@@ -94,10 +94,7 @@
         <td>
             <div class="action-buttons">
                 <a th:href="@{'/ninjas/' + ${ninja.id}}" class="btn btn-view">Visualizar</a>
-
-                <form th:action="@{'/ninjas/update/' + ${ninja.id}}" method="get">
-                    <button type="submit" class="btn btn-update">Atualizar</button>
-                </form>
+                <a th:href="@{'/ninjas/update/' + ${ninja.id}}" class="btn btn-view">Atualizar</a>
 
                 <form th:action="@{'/ninjas/delete/' + ${ninja.id}}" method="post">
                     <button type="submit" class="btn btn-delete">Deletar</button>
