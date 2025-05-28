@@ -26,10 +26,6 @@ public class NinjaControllerUi {
 
     @PostMapping("/delete/{id}")
     public String deleteNinja(@PathVariable Long id){
-        if(this.ninjaService.getNinjaById(id) == null){
-            return "redirect:/ninjas";
-        }
-
         this.ninjaService.deleteNinjaById(id);
         return "redirect:/ninjas";
     }

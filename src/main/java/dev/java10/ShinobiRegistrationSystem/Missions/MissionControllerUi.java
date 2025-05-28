@@ -1,9 +1,10 @@
 package dev.java10.ShinobiRegistrationSystem.Missions;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +23,13 @@ public class MissionControllerUi {
         model.addAttribute("missions", missions);
 
         return "getMissions";
+    }
+
+    @PostMapping("/delete/{id}")
+    public String deleteMission(@PathVariable Long id) {
+        MissionDTO existing = this.missionService.getMissionById(id);
+
+        this.missionService.deleteMissionById(id);
+        return "redirect:/missions";
     }
 }

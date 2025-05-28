@@ -40,6 +40,34 @@
         margin: 0;
         padding-left: 20px;
     }
+
+    .action-buttons button,
+    .action-buttons a {
+        margin-right: 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+
+    .btn-view {
+        background-color: #4CAF50;
+    }
+
+    .btn-edit {
+        background-color: #FFC107;
+    }
+
+    .btn-delete {
+        background-color: #F44336;
+    }
+
+    .action-buttons form {
+        display: inline;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +81,7 @@
     <th>Descrição</th>
     <th>Rank</th>
     <th>Ninjas Envolvidos</th>
+    <th>Ações</th>
   </tr>
   </thead>
   <tbody>
@@ -66,6 +95,16 @@
         <li th:each="ninja : ${mission.ninjas}"
             th:text="${ninja.name}"></li>
       </ul>
+    </td>
+    <td class="action-buttons">
+      <a th:href="@{'/missions/' + ${mission.id}}" class="btn-view">Visualizar</a>
+
+      <a th:href="@{'/missions/edit/' + ${mission.id}}" class="btn-edit">Atualizar</a>
+
+      <form th:action="@{'/missions/delete/' + ${mission.id}}" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <button type="submit" class="btn-delete">Deletar</button>
+      </form>
     </td>
   </tr>
   </tbody>
