@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/ninjas")
+@RequestMapping("/api/ninjas")
 public class NinjaController {
 
     private final NinjaService ninjaService;
