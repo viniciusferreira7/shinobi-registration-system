@@ -1,4 +1,3 @@
-```markdown
 # Shinobi Registration System
 
 A Java-based web application built with Spring Boot that manages **ninjas** and **missions** using a clean layered architecture. It demonstrates CRUD operations, data validation, and relational mapping using modern tools like JPA, Hibernate, Flyway, Lombok, and an in-memory H2 database.
@@ -20,14 +19,14 @@ A Java-based web application built with Spring Boot that manages **ninjas** and 
 ## 📁 Project Structure
 
 ```
-```
    src/
    ├── main/
    │   └── java/dev/java10/ShinobiRegistrationSystem/
    │       ├── Ninjas/
    │       │   ├── NinjaModel.java         # Entity class mapped to the database
    │       │   ├── NinjaDTO.java           # Data Transfer Object for ninja data
-   │       │   ├── NinjaController.java    # REST and UI controller for ninjas
+   │       │   ├── NinjaController.java    # REST controller for ninjas
+   │       │   ├── NinjaControllerUi.java  # REST and UI controller for ninjas
    │       │   ├── NinjaService.java       # Business logic layer
    │       │   ├── NinjaRepository.java    # Data access layer (Spring Data JPA)
    │       │   ├── NinjaMapper.java        # Converts between Model and DTO
@@ -36,15 +35,13 @@ A Java-based web application built with Spring Boot that manages **ninjas** and 
    │       ├── Missions/
    │       │   ├── MissionModel.java       # Entity class for missions
    │       │   ├── MissionDTO.java         # Data Transfer Object for mission data
-   │       │   ├── MissionController.java  # REST and UI controller for missions
+   │       │   ├── MissionController.java  # REST controller for missions
+   │       │   ├── MissionControllerUi.java  # REST and UI controller for missions
    │       │   ├── MissionService.java     # Business logic layer
    │       │   ├── MissionRepository.java  # Data access layer
    │       │   ├── MissionMapper.java      # Converts between Model and DTO
-│       │   └── MissionRank.java        # Enum defining mission difficulty
+   │       │   └── MissionRank.java        # Enum defining mission difficulty
 ```
-````
-
----
 
 ## 🧠 Key Concepts
 
@@ -63,7 +60,7 @@ A Java-based web application built with Spring Boot that manages **ninjas** and 
    ```bash
    git clone https://github.com/your-username/shinobi-registration-system.git
    cd shinobi-registration-system
-````
+```
 
 2. Build and run the project with Maven:
 
