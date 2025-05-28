@@ -24,6 +24,18 @@ public class NinjaControllerUi {
         return "getNinjas";
     }
 
+    @GetMapping("/{id}")
+    public String getNinjaById(@PathVariable Long id, Model model){
+        NinjaDTO ninja = this.ninjaService.getNinjaById(id);
+
+     if(ninja == null){
+            return "redirect:/ninjas";
+        }
+
+        model.addAttribute("ninja", ninja);
+        return "getNinja";
+    }
+
     @PostMapping("/delete/{id}")
     public String deleteNinja(@PathVariable Long id){
         this.ninjaService.deleteNinjaById(id);
