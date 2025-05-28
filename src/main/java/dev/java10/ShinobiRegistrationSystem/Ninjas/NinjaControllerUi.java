@@ -1,9 +1,10 @@
 package dev.java10.ShinobiRegistrationSystem.Ninjas;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +22,15 @@ public class NinjaControllerUi {
         List<NinjaDTO> ninjas = this.ninjaService.getNinjas();
         model.addAttribute("ninjas", ninjas);
         return "getNinjas";
+    }
+
+    @PostMapping("/delete/{id}")
+    public String deleteNinja(@PathVariable Long id){
+        if(this.ninjaService.getNinjaById(id) == null){
+            return "redirect:/ninjas";
+        }
+
+        this.ninjaService.deleteNinjaById(id);
+        return "redirect:/ninjas";
     }
 }
