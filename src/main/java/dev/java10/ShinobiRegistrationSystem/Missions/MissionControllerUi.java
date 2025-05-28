@@ -25,6 +25,18 @@ public class MissionControllerUi {
         return "getMissions";
     }
 
+    @GetMapping("/{id}")
+    public String getMissionById(@PathVariable Long id, Model model) {
+        MissionDTO mission = this.missionService.getMissionById(id);
+
+        if (mission == null) {
+            return "redirect:/missions";
+        }
+
+        model.addAttribute("mission", mission);
+        return "getMission";
+    }
+
     @PostMapping("/delete/{id}")
     public String deleteMission(@PathVariable Long id) {
         MissionDTO existing = this.missionService.getMissionById(id);
