@@ -10,6 +10,7 @@ A Java-based web application built with Spring Boot that manages **ninjas** and 
 - **Hibernate**
 - **H2 Database** (in-memory for development)
 - **Flyway** (database migration)
+- **Swagger** (documentation)
 - **Lombok**
 - **Thymeleaf** (HTML templates)
 - **Layered architecture** (Controller, Service, Repository, DTO, Model)
@@ -71,6 +72,7 @@ A Java-based web application built with Spring Boot that manages **ninjas** and 
 3. Access the app at:
 
    ```
+   http://localhost:8080/swagger-ui/index.html
    http://localhost:8080/ninjas
    http://localhost:8080/missions
    ```
